@@ -90,8 +90,8 @@ def plot_performance_progress():
     head_to_head_matches = df[((df['home_team'] == home_team) & (df['away_team'] == away_team)) |
                               ((df['home_team'] == away_team) & (df['away_team'] == home_team))]
     if len(head_to_head_matches) > 0:
-        head_to_head_home_win_percentage, head_to_head_away_win_percentage, head_to_head_draw_percentage, head_to_head_loss_percentage = calculate_performance(
-            head_to_head_matches)
+        head_to_head_home_win_percentage, head_to_head_away_win_percentage, head_to_head_draw_percentage,
+        head_to_head_loss_percentage = calculate_performance(head_to_head_matches)
         head_to_head_performance_text = f"Head-to-Head Performance:\n\n"
         head_to_head_performance_text += f"{home_team}:\nWin %: {head_to_head_home_win_percentage:.2f}%\n"
         head_to_head_performance_text += f"{away_team}:\nWin %: {head_to_head_away_win_percentage:.2f}%\n"
@@ -173,7 +173,8 @@ home_last_matches_label = tk.Label(last_matches_frame, text="Last Matches of Hom
 home_last_matches_label.pack(side=tk.TOP)
 
 home_table = ttk.Treeview(last_matches_frame,
-                          columns=('Date', 'Home Team', 'Away Team', 'Home Score', 'Away Score'), show='headings')
+                          columns=('Date', 'Home Team', 'Away Team', 
+                                   'Home Score', 'Away Score'), show='headings')
 
 home_table.heading('Date', text='Date')
 home_table.heading('Home Team', text='Home Team')
@@ -186,7 +187,8 @@ away_last_matches_label = tk.Label(last_matches_frame, text="Last Matches of Awa
 away_last_matches_label.pack(side=tk.TOP)
 
 away_table = ttk.Treeview(last_matches_frame,
-                          columns=('Date', 'Home Team', 'Away Team', 'Home Score', 'Away Score'), show='headings')
+                          columns=('Date', 'Home Team', 'Away Team', 
+                                   'Home Score', 'Away Score'), show='headings')
 
 away_table.heading('Date', text='Date')
 away_table.heading('Home Team', text='Home Team')
