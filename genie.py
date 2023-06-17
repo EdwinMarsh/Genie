@@ -1,6 +1,6 @@
 import pandas as pd
-import tkinter as tk
-from tkinter import ttk
+import tkinter as tk  # pylint: disable=import-error
+from tkinter import ttk  # pylint: disable=import-error
 import matplotlib.pyplot as plt
 
 # Load the CSV file

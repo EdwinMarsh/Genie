@@ -2,7 +2,6 @@
 Gaming Bet analyzer
 # Requirements
 Pandas
-Tkinter
 Matplotlib
 Numpy
 # Usage
